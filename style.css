@@ -2,15 +2,19 @@
     font-family: 'Roboto-Medium';
     src: url('fonts/Roboto-Medium.ttf');
 }
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('fonts/Roboto-Regular.ttf');
+}
 * {
     box-sizing: border-box;
 }
 @media all and (max-width: 700px) {
     body {
-        font-family: "roboto-Medium";
-        src: url('fonts/Roboto-Medium.ttf');
+        font-family: 'Roboto-Medium';
     }
 }
+/*HEADER*/
 /*LOGO*/
 @media all and (max-width: 700px) {
 #bloc_header {
@@ -36,11 +40,18 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    row-gap: 10px;
+    row-gap: 20px;
 }
 h1 {
-    font-size: 1.4em;
+    font-size: 1.6em;
     width: 70%;
+    margin-bottom: 0;
+}
+body p {
+    font-family: 'Roboto-Regular';
+}
+#menu p {
+   margin-top: 0;
 }
 .search_m {
     height: 35px;
@@ -69,4 +80,173 @@ h1 {
     border: none;
     color: white;
 }
+}
+/*Fin HEADER*/
+/*Bloc_Nav*/
+@media all and (max-width: 700px) {
+    #bloc_nav {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    #bloc_nav h2 {
+        padding-left: 20px;
+    }
+    .nav_fonction {
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+        padding-left: 15px;
+    }
+    .fonction_bar {
+        width: 95%;
+        height: 60px;
+        border: #EFEFEE solid;
+        border-radius: 20px;
+        display: flex;
+        column-gap: 20px;
+        align-items: center;
+        align-content: center;
+        background: #EFEFEE;
+        font-size: 1em;
+        box-shadow:#dbdada 4px 4px 4px 4px;
+    }
+    .fonction_bar a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+    }
+    .i_circle {
+        overflow: visible;
+        font-size: 15px;
+        border-radius: 100%;
+        border: 1em #9356DC;
+        width: 25px;
+        height: 25px;
+        background: #9356DC;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .iconne_nav {
+        color: grey;
+        font-size: 22px;
+    }
+    .iconne_compo {
+        color: grey;
+        font-size: 15px;
+    }
+    .iconne_store {
+        color: grey;
+        font-size: 18px;
+    }
+}
+/*fin Bloc_nav*/
+/*SEction*/
+@media all and (max-width: 700px) {
+    #section_restaurant {
+        width: 100%;
+        height: 100%;
+        background-color: #EFEFEE;
+        padding-left: 20px;
+        padding-top: 30px;
+        padding-bottom: 50px;
+        
+    }
+    .selection_cartes {
+        row-gap: 20px;
+        width: 100%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+    }
+    #section_restaurant img {
+        width: 100%;
+        height: 180px;
+        background-position: center;
+        background-size: cover;
+        border-radius: 20px 20px 0 0;
+    }
+    .carte_restaurant {
+        width: 95%;
+        height: 250px;
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow: #e2e2e2 3px 5px 5px;
+    }
+    .legende_restaurant {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: 3fr 1fr;
+        padding-left: 20px;
+        
+    }
+    .legende_text {
+        display: grid;
+        height: 70px;
+        padding-top: 10px;
+    }
+    .i_heart {
+        grid-column: 2;
+        grid-row: 1;
+        font-size: 30px;
+        display: grid;
+        align-content: center;
+    }
+    .name_r {
+        grid-column: 1;
+        grid-row: 1;
+        align-self: flex-start;
+        margin-bottom: 10px;
+    }
+    .location_r {
+        grid-column: 1;
+        grid-row: 1;
+        align-self: flex-end;
+    }
+}
+/*End section*/
+/*FOOTER*/
+@media all and (max-width: 700px) {
+    #bloc_end {
+    background-color: rgb(56, 56, 56);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-bottom: 40px;
+    }
+    .logo_end img {
+        width: 100px;
+        padding-bottom: 20px;
+        padding-top: 30px;
+    }
+    .navbar_end a {
+        text-decoration: none;
+        color: white;
+    }
+    .navbar_end {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        column-gap: 10px;
+    }
+    .navbar_restaurant, .navbar_partenaire {
+        display: flex; 
+    }
+    .i_ustensil {
+        color: white;
+        padding-right: 15px;
+        width: 10%;
+        
+    }
+    .i_hand {
+        color: white;
+        padding-right: 15px;
+        width: 10%;
+        
+    }
 }
