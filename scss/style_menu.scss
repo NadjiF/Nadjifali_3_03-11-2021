@@ -1,0 +1,218 @@
+/*variables*/
+$primary: #9356DC;
+$secondray: #FF79DA; 
+$tertiary: #99E2D0;
+$linear: linear-gradient(#FF79DA,#9356DC  90%);
+/*MIXINS*/
+@mixin flexbox-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flexbox-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+body {
+    font-family: 'Roboto';
+}
+#header_bloc {
+    @include flex-between();
+    padding-bottom: 20px;
+    width: 100%;
+    height: 100px;
+}
+.header_arrow a {
+    padding-left: 20px;
+    color: black;
+    font-size: 20px;
+    width: 50%;
+}
+.header_arrow a:visited {
+    color: black;
+}
+.header_logo {
+    display: flex;
+    column-gap: 50px;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    height: 40px;
+}
+.header_logo img {
+    width: 140px;
+}
+.header_cov-photo {
+    width: 100%;
+    height: 55vh;
+}
+.header_cov-photo img{
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    
+}
+/*menu*/
+#menu_bloc {
+    display: inline-block;
+    flex-direction: column;
+    background-color: #efefee;
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+    height: 840px;
+    margin-top: -40px;
+
+}
+.menu_title h1 {
+    font-family: 'Shrikhand';
+    padding-left: 20px;
+}
+.menu_boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-left: 10px;
+    margin-bottom: 40px;
+}
+.menu_box {
+    display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+        padding-bottom: 10px;
+}
+.menu_box-title {
+    padding-left: 5px;
+    padding-bottom: 5px;
+}
+.menu_underline-effect {
+    border-bottom: #99E2D0 solid 3px;
+    width: 40px;
+    padding-top: 5px;
+}
+.menu_case {
+    width: 90%;
+    height: 100px;
+    border: #EFEFEE solid;
+    border-radius: 20px;
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    padding-left: 10px;
+    margin: 10px 10px 10px 0;
+}
+.menu_legende p {
+    margin: 0;
+    padding-top: 5px;
+    font-size: 0.9em;
+}
+.menu_tarifs {
+    font-weight: bold;
+        padding-top: 16px;
+        padding-right: 20px;
+}
+.command {
+    display: flex;
+    justify-content: center;
+}
+.command_button {
+    border-radius: 40px;
+    font-size: 1.1em;
+    height: 55px;
+    width: 20%;
+    background: linear-gradient(#FF79DA,#9356DC  90%);
+    border: none;
+    color: white;
+}
+/*footer*/
+    #footer_bloc {   
+    background-color: rgb(56, 56, 56);
+    width: 100%;
+    padding-left: 20px;
+    padding-bottom: 40px;
+    }
+    .footer_logo img {
+        width: 100px;
+        padding-bottom: 20px;
+        padding-top: 30px;
+    }
+    .footer_navbar a {
+        text-decoration: none;
+        color: white;
+    }
+    .footer_navbar {
+        display: flex;
+        flex-direction: row;
+        row-gap: 10px;
+        column-gap: 10px;
+    }
+    .footer_navbar-r, .footer_navbar-p {
+        display: flex; 
+        column-gap: 5px;
+    }
+    .footer_i-ustensil {
+        color: white;
+        padding-right: 15px;
+        width: 10%;
+        
+    }
+    .footer_i-hand {
+        color: white;
+        padding-right: 15px;
+        width: 10%;
+        
+    }
+    /*responsive*/
+    @media all and (max-width: 800px) {
+        body {
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+        .header_cov-photo img{
+            margin-top: -50px;
+        }
+        #menu_bloc {
+            padding-left: 5px;
+            padding-bottom: 50px;
+            width: 96%;
+            height: 100%;
+            padding-right: 10px;
+            margin-top: -200px;
+        }
+        .menu_title h1 {
+            padding-left: 5px;
+        }
+        .menu_boxes {
+            display: flex;
+            flex-direction: column;
+            padding-left: 0;
+        }
+        .menu_box {
+            row-gap: 10px;
+        }
+        .menu_case {
+            width: 98%;
+            height: 70px;
+            margin: 0;
+        }
+        .command {
+            padding-top: 20px;
+        }
+        .command_button {
+            width: 65%;
+        }
+        #footer_bloc {
+            display: flex;
+            flex-direction: column;
+        }
+        .footer_navbar {
+            display: flex;
+            flex-direction: column;
+        }
+    }
