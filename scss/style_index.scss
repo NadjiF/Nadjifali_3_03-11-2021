@@ -2,7 +2,7 @@
 $primary: #9356DC;
 $secondray: #FF79DA; 
 $tertiary: #99E2D0;
-$linear: linear-gradient(#FF79DA,#9356DC  90%);
+$gradien: linear-gradient(#FF79DA,#9356DC  90%);
 /*MIXINS*/
 @mixin flexbox-center {
     display: flex;
@@ -18,9 +18,67 @@ $linear: linear-gradient(#FF79DA,#9356DC  90%);
     box-sizing: border-box;
 }
 
-    body {
-        font-family: 'Roboto';
+body {
+    font-family: 'Roboto';
+}
+/*Animation loading spinner*/
+.spinner {
+    height: 100%;
+    background: white;
+    margin: auto;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 20;
+    animation: spinner 6s linear ;
+    visibility: hidden;
+}
+.spinner_border {
+    @include flexbox-center;
+    border: 6px solid $primary;
+    border-top-color: $secondray;
+    border-bottom-color: $tertiary;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    animation: spinner-border 5s linear ;
+    z-index: 10;
+    visibility: hidden;
     }
+   
+@keyframes spinner {
+    0% {
+        visibility: visible;
+        opacity: 0.9;
+    }
+    50% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes spinner-border {
+    0% {
+        visibility: visible;
+        opacity: 1;  
+    }
+   
+    50% {
+        opacity: 1;
+        transform: rotate(360deg)
+    }
+    100% {
+        transform: rotate(360deg);
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
 
 /*HEADER*/
 /*LOGO*/
@@ -80,7 +138,7 @@ $linear: linear-gradient(#FF79DA,#9356DC  90%);
     font-size: 1.1em;
     height: 55px;
     padding: 0 20px 0 20px;
-    background: $linear;
+    background: $gradien;
     border: none;
     color: white;
     }
@@ -226,12 +284,29 @@ $linear: linear-gradient(#FF79DA,#9356DC  90%);
         height: 70px;
         padding-top: 10px;
     }
-    .restaurant_i-heart {
+    .restaurant_icone-heart {
         grid-column: 2;
         grid-row: 1;
         font-size: 30px;
         display: grid;
         align-content: center;
+    }
+    .fa-heart {
+        content: "\f004";
+        color: white;
+        background-clip: text;
+        -webkit-background-clip: text;
+        background-color: black ;
+        font-weight: bold;
+        font-family: 'Times New Roman', Times, serif;
+       
+    }
+.fa-heart:hover {
+        color: transparent;
+        background: linear-gradient(#FF79DA,#9356DC  90%);
+        background-clip: text;
+        -webkit-background-clip: text;
+     
     }
 
     .restaurant_name {

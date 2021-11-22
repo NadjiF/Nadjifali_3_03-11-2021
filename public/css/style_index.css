@@ -9,6 +9,114 @@ body {
   font-family: 'Roboto';
 }
 
+/*Animation loading spinner*/
+.spinner {
+  height: 100%;
+  background: white;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 20;
+  -webkit-animation: spinner 6s linear;
+          animation: spinner 6s linear;
+  visibility: hidden;
+}
+
+.spinner_border {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 6px solid #9356DC;
+  border-top-color: #FF79DA;
+  border-bottom-color: #99E2D0;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-animation: spinner-border 5s linear;
+          animation: spinner-border 5s linear;
+  z-index: 10;
+  visibility: hidden;
+}
+
+@-webkit-keyframes spinner {
+  0% {
+    visibility: visible;
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes spinner {
+  0% {
+    visibility: visible;
+    opacity: 0.9;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes spinner-border {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes spinner-border {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
 /*HEADER*/
 /*LOGO*/
 #header_bloc {
@@ -281,7 +389,7 @@ h1 {
   padding-top: 10px;
 }
 
-.restaurant_i-heart {
+.restaurant_icone-heart {
   -ms-grid-column: 2;
   grid-column: 2;
   -ms-grid-row: 1;
@@ -291,6 +399,24 @@ h1 {
   display: grid;
   -ms-flex-line-pack: center;
       align-content: center;
+}
+
+.fa-heart {
+  content: "\f004";
+  color: white;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-color: black;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.fa-heart:hover {
+  color: transparent;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), color-stop(90%, #9356DC));
+  background: linear-gradient(#FF79DA, #9356DC 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
 .restaurant_name {
