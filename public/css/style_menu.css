@@ -325,8 +325,8 @@ body {
             transform: translateX(0px);
   }
   100% {
-    -webkit-transform: translateX(-50px);
-            transform: translateX(-50px);
+    -webkit-transform: translateX(25px);
+            transform: translateX(25px);
   }
 }
 
@@ -336,8 +336,8 @@ body {
             transform: translateX(0px);
   }
   100% {
-    -webkit-transform: translateX(-50px);
-            transform: translateX(-50px);
+    -webkit-transform: translateX(25px);
+            transform: translateX(25px);
   }
 }
 

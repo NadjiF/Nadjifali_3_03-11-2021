@@ -297,18 +297,14 @@ body {
         background-clip: text;
         -webkit-background-clip: text;
         background-color: black ;
-        font-weight: bold;
-        font-family: 'Times New Roman', Times, serif;
-       
+        font-weight: bold; 
     }
 .fa-heart:hover {
         color: transparent;
         background: linear-gradient(#FF79DA,#9356DC  90%);
         background-clip: text;
         -webkit-background-clip: text;
-     
-    }
-
+}
     .restaurant_name {
         grid-column: 1;
         grid-row: 1;
