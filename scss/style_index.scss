@@ -284,27 +284,34 @@ body {
         height: 70px;
         padding-top: 10px;
     }
-    .restaurant_icone-heart {
-        grid-column: 2;
-        grid-row: 1;
-        font-size: 30px;
-        display: grid;
-        align-content: center;
+    .restaurant_legende i  {
+        position: absolute;
+        font-size: 35px;
+       right: 1rem;
+       top: 80%;
+       transform: translateY(-50%);
     }
-    .fa-heart {
-        content: "\f004";
-        color: white;
+    .restaurant_legende .fas {
+        color: transparent;
+        background: $gradien;
         background-clip: text;
         -webkit-background-clip: text;
-        background-color: black ;
-        font-weight: bold; 
+        opacity: 0;
+        transition: all 100ms ease-in-out;
+
     }
-.fa-heart:hover {
+    .restaurant_legende:hover .fas{
+        opacity: 1;
+        transform: translateY(-50%) scale(1);
+    }
+    .restaurant_legende:hover .empty-heart {
         color: transparent;
         background: linear-gradient(#FF79DA,#9356DC  90%);
         background-clip: text;
         -webkit-background-clip: text;
-}
+       
+        
+    }
     .restaurant_name {
         grid-column: 1;
         grid-row: 1;

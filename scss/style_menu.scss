@@ -74,23 +74,32 @@ body {
     justify-content: space-between;
     align-items: center;
 }
-.fa-heart {
-    content: "\f004";
-    color: white;
+.restaurant_icone-heart {
+    padding-bottom: 30px;
+}
+.restaurant_icone-heart i  {
+    position: absolute;
+    font-size: 35px;
+   right: 1rem;
+}
+.restaurant_icone-heart .fas {
+    color: transparent;
+    background: $gradien;
     background-clip: text;
     -webkit-background-clip: text;
-    background-color: black ;
-    font-weight: bold;
-    font-size: 35px;
-    padding-right: 20px;
-   
+    opacity: 0;
+    transition: all 100ms ease-in-out;
+
 }
-.fa-heart:hover {
+.restaurant_icone-heart:hover .fas{
+    opacity: 1;
+    transform: scale(1);
+}
+.restaurant_icone-heart:hover .empty-heart {
     color: transparent;
     background: linear-gradient(#FF79DA,#9356DC  90%);
     background-clip: text;
     -webkit-background-clip: text;
-
 }
 .menu_title h1 {
     font-family: 'Shrikhand';
@@ -161,13 +170,11 @@ body {
     align-items: center;
     overflow: hidden;
 }
-.menu_legende:hover {
-    padding-right: 70px;
-    transition: 0.5s ease;
-}
+
 .menu_legende-title {
     margin-left: 20px;
     white-space: nowrap;
+    overflow: hidden;
     
 }
 
@@ -184,17 +191,20 @@ body {
     padding-top: 16px;
     padding-right: 20px;
     padding-left: 10px;
-    overflow: hidden;
+    
 }
 .menu_case:hover .menu_tarifs{
-    padding-right: 70px;
-    transition: 0.5s ease;
+    padding-right: 100px;
+    transition: 0.3s ease-in;
 }
 .menu_case:hover .anim_valid {
     
     @include flexbox-center();
     transform-origin:right;
-    animation: slide-left 0.5s ease;
+    animation: slide-left 0.3s ease;
+    
+
+    
 }
 .menu_case .anim_valid {
     display: none;
@@ -273,8 +283,8 @@ body {
     .footer_navbar {
         display: flex;
         flex-direction: row;
-        row-gap: 10px;
-        column-gap: 10px;
+        justify-content: space-between;
+        width: 90%;
     }
     .footer_navbar-r, .footer_navbar-p {
         display: flex; 
@@ -282,14 +292,14 @@ body {
     }
     .footer_i-ustensil {
         color: white;
-        padding-right: 15px;
-        width: 10%;
+        width: 5%;
+        padding-right: 5px;
         
     }
     .footer_i-hand {
         color: white;
-        padding-right: 15px;
         width: 10%;
+        padding-right: 5px;
         
     }
     /*responsive*/
@@ -337,6 +347,11 @@ body {
         .footer_navbar {
             display: flex;
             flex-direction: column;
+            row-gap: 10px;
+        }
+        .footer_i-hand {
+            width: 5%;
+            padding-right: 0;
         }
     }
     @media all and (max-width: 1080px) {

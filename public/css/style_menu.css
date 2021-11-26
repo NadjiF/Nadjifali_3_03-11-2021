@@ -89,18 +89,34 @@ body {
           align-items: center;
 }
 
-.fa-heart {
-  content: "\f004";
-  color: white;
-  background-clip: text;
-  -webkit-background-clip: text;
-  background-color: black;
-  font-weight: bold;
-  font-size: 35px;
-  padding-right: 20px;
+.restaurant_icone-heart {
+  padding-bottom: 30px;
 }
 
-.fa-heart:hover {
+.restaurant_icone-heart i {
+  position: absolute;
+  font-size: 35px;
+  right: 1rem;
+}
+
+.restaurant_icone-heart .fas {
+  color: transparent;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), color-stop(90%, #9356DC));
+  background: linear-gradient(#FF79DA, #9356DC 90%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  -webkit-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
+}
+
+.restaurant_icone-heart:hover .fas {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.restaurant_icone-heart:hover .empty-heart {
   color: transparent;
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), color-stop(90%, #9356DC));
   background: linear-gradient(#FF79DA, #9356DC 90%);
@@ -220,15 +236,10 @@ body {
   overflow: hidden;
 }
 
-.menu_legende:hover {
-  padding-right: 70px;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
-}
-
 .menu_legende-title {
   margin-left: 20px;
   white-space: nowrap;
+  overflow: hidden;
 }
 
 .menu_legende p {
@@ -244,13 +255,12 @@ body {
   padding-top: 16px;
   padding-right: 20px;
   padding-left: 10px;
-  overflow: hidden;
 }
 
 .menu_case:hover .menu_tarifs {
-  padding-right: 70px;
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
+  padding-right: 100px;
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
 }
 
 .menu_case:hover .anim_valid {
@@ -265,8 +275,8 @@ body {
           align-items: center;
   -webkit-transform-origin: right;
           transform-origin: right;
-  -webkit-animation: slide-left 0.5s ease;
-          animation: slide-left 0.5s ease;
+  -webkit-animation: slide-left 0.3s ease;
+          animation: slide-left 0.3s ease;
 }
 
 .menu_case .anim_valid {
@@ -389,9 +399,10 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  row-gap: 10px;
-  -webkit-column-gap: 10px;
-          column-gap: 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 90%;
 }
 
 .footer_navbar-r, .footer_navbar-p {
@@ -404,14 +415,14 @@ body {
 
 .footer_i-ustensil {
   color: white;
-  padding-right: 15px;
-  width: 10%;
+  width: 5%;
+  padding-right: 5px;
 }
 
 .footer_i-hand {
   color: white;
-  padding-right: 15px;
   width: 10%;
+  padding-right: 5px;
 }
 
 /*responsive*/
@@ -474,6 +485,11 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    row-gap: 10px;
+  }
+  .footer_i-hand {
+    width: 5%;
+    padding-right: 0;
   }
 }
 
