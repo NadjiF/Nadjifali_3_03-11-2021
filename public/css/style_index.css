@@ -20,8 +20,8 @@ body {
   right: 0;
   bottom: 0;
   z-index: 20;
-  -webkit-animation: spinner 6s linear;
-          animation: spinner 6s linear;
+  -webkit-animation: spinner 4s linear;
+          animation: spinner 4s linear;
   visibility: hidden;
 }
 
@@ -47,8 +47,8 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  -webkit-animation: spinner-border 5s linear;
-          animation: spinner-border 5s linear;
+  -webkit-animation: spinner-border 3s linear;
+          animation: spinner-border 3s linear;
   z-index: 10;
   visibility: hidden;
 }
@@ -193,12 +193,14 @@ h1 {
 
 .header_recherche {
   border: none;
-  background: #EFEFEE;
+  background: #ebebebfb;
   font-weight: bold;
   font-size: 0.9em;
 }
 
 .header_command-button {
+  cursor: pointer;
+  opacity: 1;
   border-radius: 40px;
   font-size: 1.1em;
   height: 55px;
@@ -207,6 +209,16 @@ h1 {
   background: linear-gradient(#FF79DA, #9356DC 90%);
   border: none;
   color: white;
+  box-shadow: 6px 5px 5px 0px rgba(171, 150, 150, 0.75);
+  -webkit-box-shadow: 6px 5px 5px 0px rgba(171, 150, 150, 0.75);
+  -moz-box-shadow: 6px 5px 5px 0px rgba(171, 150, 150, 0.75);
+}
+
+.header_command-button:hover {
+  opacity: 0.7;
+  box-shadow: 6px 5px 5px 0px rgba(109, 96, 96, 0.75);
+  -webkit-box-shadow: 6px 5px 5px 0px rgba(109, 96, 96, 0.75);
+  -moz-box-shadow: 6px 5px 5px 0px rgba(109, 96, 96, 0.75);
 }
 
 /*Fin HEADER*/
@@ -250,10 +262,11 @@ h1 {
       align-content: center;
   background: #EFEFEE;
   font-size: 1em;
-  -webkit-box-shadow: #dbdada 4px 4px 4px 4px;
-          box-shadow: #dbdada 4px 4px 4px 4px;
   padding-right: 10px;
   margin: 0 20px 0 10px;
+  box-shadow: 6px 5px 5px 0px rgba(190, 182, 182, 0.75);
+  -webkit-box-shadow: 6px 5px 5px 0px rgba(190, 182, 182, 0.75);
+  -moz-box-shadow: 6px 5px 5px 0px rgba(190, 182, 182, 0.75);
 }
 
 .navbar_fonction a {

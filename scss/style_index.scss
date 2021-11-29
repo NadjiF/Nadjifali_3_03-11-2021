@@ -29,7 +29,7 @@ body {
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
     z-index: 20;
-    animation: spinner 6s linear ;
+    animation: spinner 4s linear ;
     visibility: hidden;
 }
 .spinner_border {
@@ -43,7 +43,7 @@ body {
     margin: auto;
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
-    animation: spinner-border 5s linear ;
+    animation: spinner-border 3s linear ;
     z-index: 10;
     visibility: hidden;
     }
@@ -129,11 +129,13 @@ body {
     }
     .header_recherche {
     border: none;
-    background: #EFEFEE;
+    background: #ebebebfb;
     font-weight: bold;
     font-size: 0.9em;
     }
     .header_command-button {
+    cursor: pointer;
+    opacity: 1;
     border-radius: 40px;
     font-size: 1.1em;
     height: 55px;
@@ -141,6 +143,15 @@ body {
     background: $gradien;
     border: none;
     color: white;
+    box-shadow: 6px 5px 5px 0px rgba(171,150,150,0.75);
+    -webkit-box-shadow: 6px 5px 5px 0px rgba(171,150,150,0.75);
+    -moz-box-shadow: 6px 5px 5px 0px rgba(171,150,150,0.75);
+    }
+    .header_command-button:hover {
+        opacity: 0.7;
+        box-shadow: 6px 5px 5px 0px rgba(109, 96, 96, 0.75);
+        -webkit-box-shadow: 6px 5px 5px 0px rgba(109, 96, 96, 0.75);
+        -moz-box-shadow: 6px 5px 5px 0px rgba(109, 96, 96, 0.75);
     }
 
 /*Fin HEADER*/
@@ -174,9 +185,11 @@ body {
         align-content: center;
         background: #EFEFEE;
         font-size: 1em;
-        box-shadow:#dbdada 4px 4px 4px 4px;
         padding-right: 10px;
         margin: 0 20px 0 10px;
+        box-shadow: 6px 5px 5px 0px rgba(190, 182, 182, 0.75);
+        -webkit-box-shadow: 6px 5px 5px 0px rgba(190, 182, 182, 0.75);
+        -moz-box-shadow: 6px 5px 5px 0px rgba(190, 182, 182, 0.75);
     }
     .navbar_fonction a {
         text-decoration: none;
