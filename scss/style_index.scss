@@ -358,8 +358,8 @@ body {
     .footer_navbar {
         display: flex;
         flex-direction: row;
-        row-gap: 10px;
-        column-gap: 10px;
+        justify-content: space-between;
+        width: 90%;
     }
     .footer_navbar-r, .footer_navbar-p {
         display: flex; 
@@ -367,13 +367,13 @@ body {
     }
     .footer_i-ustensil {
         color: white;
-        padding-right: 15px;
-        width: 10%;
+        padding-right: 5px;
+        width: 5%;
         
     }
     .footer_i-hand {
         color: white;
-        padding-right: 15px;
+        padding-right: 5px;
         width: 10%;
         
     }
@@ -400,6 +400,9 @@ body {
             row-gap: 20px;
             width: 95%;
     }
+    .navbar_fonction {
+        column-gap: 20px;
+    }
     .restaurant_selection-cartes {
         display: flex;
         flex-direction: column;
@@ -413,6 +416,22 @@ body {
     .footer_navbar {
         display: flex;
         flex-direction: column;
+        row-gap: 10px;
+    }
+    .footer_i-hand {
+        width: 5%;
+        padding-right: 0;
     }
 }
 /*tablette*/
+@media all and (max-width: 1024px) {
+    .navbar_fonction {
+        width: 100%;
+        column-gap: 0;
+    }
+    .navbar_iconne, .navbar_iconne-compo, .navbar_iconne-store {
+        padding-right: 5px;
+    }
+
+
+}
