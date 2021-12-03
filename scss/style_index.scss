@@ -297,7 +297,7 @@ body {
         height: 70px;
         padding-top: 10px;
     }
-    .restaurant_legende i  {
+    .restaurant_carte i  {
         cursor: pointer;
         position: absolute;
         font-size: 35px;
@@ -305,7 +305,7 @@ body {
        top: 80%;
        transform: translateY(-50%);
     }
-    .restaurant_legende .fas {
+    .restaurant_carte .fas {
         color: transparent;
         background: $gradien;
         background-clip: text;
@@ -314,11 +314,11 @@ body {
         transition: all 500ms ease-in-out;
 
     }
-    .restaurant_legende:hover .fas{
+    .restaurant_carte:hover .fas{
         opacity: 1;
         transform: translateY(-50%) scale(1);
     }
-    .restaurant_legende:hover .empty-heart {
+    .restaurant_carte:hover .empty-heart {
         color: transparent;
         background: linear-gradient(#FF79DA,#9356DC  90%);
         background-clip: text;
