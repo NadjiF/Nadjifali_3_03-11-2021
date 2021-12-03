@@ -316,16 +316,15 @@ body {
     }
     .restaurant_icone-heart:hover .fas{
         opacity: 1;
-        transform: translateY(-50%) scale(1);
+        transform: translateY(-50%) scale(1.1);
     }
     .restaurant_icone_heart:hover .empty-heart {
         color: transparent;
         background: linear-gradient(#FF79DA,#9356DC  90%);
         background-clip: text;
-        -webkit-background-clip: text;
-       
-        
+        -webkit-background-clip: text;  
     }
+    
     .restaurant_name {
         grid-column: 1;
         grid-row: 1;
