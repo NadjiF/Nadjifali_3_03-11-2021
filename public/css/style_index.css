@@ -402,7 +402,7 @@ h1 {
   padding-top: 10px;
 }
 
-.restaurant_carte i {
+.restaurant_icone-heart i {
   cursor: pointer;
   position: absolute;
   font-size: 35px;
@@ -412,7 +412,7 @@ h1 {
           transform: translateY(-50%);
 }
 
-.restaurant_carte .fas {
+.restaurant_icone-heart .fas {
   color: transparent;
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), color-stop(90%, #9356DC));
   background: linear-gradient(#FF79DA, #9356DC 90%);
@@ -423,13 +423,13 @@ h1 {
   transition: all 500ms ease-in-out;
 }
 
-.restaurant_carte:hover .fas {
+.restaurant_icone-heart:hover .fas {
   opacity: 1;
   -webkit-transform: translateY(-50%) scale(1);
           transform: translateY(-50%) scale(1);
 }
 
-.restaurant_carte:hover .empty-heart {
+.restaurant_icone_heart:hover .empty-heart {
   color: transparent;
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), color-stop(90%, #9356DC));
   background: linear-gradient(#FF79DA, #9356DC 90%);
